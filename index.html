@@ -1,0 +1,39 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Лаба 1</title>
+	<style>
+.icon{
+   display: flex;
+}
+.canvas{
+    height: 500px;
+}
+.btn{
+    display: block;
+    height: 25px;
+	color: white;
+    background-color: black;
+}
+
+</style>
+</head>
+<body>
+<div class="menu">
+    <input type="file" id="imageLoader" accept=".jpg, .jpeg, .png">
+	<input class="btn" type="button" onclick="saveCanvasAsImageFile()" value="Сохранить">
+	<div>Фильтры</div>
+    <input class="btn" id="filter_negative" type="button" onclick="negativeFilter()" value="Негатив">
+    <input class="btn" type="button" onclick="function_blur()" value="Размытие">
+    <input class="btn" type="button" onclick="grayFilter()" value="Серый">
+</div>
+<div class="icon">
+
+    <canvas class="canvas" id="imageCanvas"></canvas>
+</div>
+
+<script src="/script.js"></script>
+</body>
+
+</html>
